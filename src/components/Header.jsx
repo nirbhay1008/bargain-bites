@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../img/bargain_bites_logo.jpeg";
 import { MdShoppingCart } from "react-icons/md";
 import {motion} from "framer-motion";
@@ -6,14 +6,23 @@ import Avatar from '../img/avatar.png';
 import {Link} from 'react-router-dom';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import {app} from "../firebase.config"
+import { useStateValue } from "../context/StateProvider";
+import { actionType } from "../context/reducer";
 export const Header = () => {
-
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
+
+  const [{user} , dispatch] = useStateValue()
   const login = async() =>{
-    const response = await signInWithPopup(firebaseAuth , provider)
-    console.log(response);
-  }
+    const {
+      user : {refreshToken , providerData},
+  } = await signInWithPopup(firebaseAuth , provider);
+    dispatch ({
+      type : actionType.SET_USER,
+      user : providerData[0],
+    });
+  };
+
   return (
     <header className="fixed z-50 w-screen p-6 px-10">
       {/* fordesktop */}
@@ -48,7 +57,7 @@ export const Header = () => {
           <div className="flex items-center justify-center">
             <MdShoppingCart className="text-textColor text-2xl cursor-pointer -me-2"></MdShoppingCart>
             <div className=" absolute top-9 right-24 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
-              <p className="text-xs text-white font-semibold">2</p>
+              <p className="text-xs text-white font-semibold">5</p>
             </div>
           </div>
           <div className="relative">
