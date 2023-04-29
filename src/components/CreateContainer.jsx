@@ -20,12 +20,12 @@ export const CreateContainer = () => {
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  const uploadImage = () => {
+  const uploadImage = (e) => {
     setIsLoading(true);
     const imageFile = e.target.files[0];
     console.log(imageFile);
 
-    
+
   };
 
   const deleteImage = () => {};
