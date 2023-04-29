@@ -68,25 +68,25 @@ export const Header = () => {
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-            >
+              onClick = {() => setIsMenue(false)}>
               Home
             </li>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-            >
+              onClick = {() => setIsMenue(false)}>
               Menu
             </li>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-            >
+              onClick = {() => setIsMenue(false)}>
               About us
             </li>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
-            >
+              onClick = {() => setIsMenue(false)}>
               Service
             </li>
           </motion.ul>
@@ -114,7 +114,8 @@ export const Header = () => {
               >
                 {user && user.email === "nirbhaychopra1008@gmail.com" && (
                   <Link to={"/createItem"}>
-                    <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base">
+                    <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                    onClick = {() => setIsMenue(false)}>
                       New item <MdAdd> </MdAdd>
                     </p>
                   </Link>
@@ -168,7 +169,8 @@ export const Header = () => {
             >
               {user && user.email === "nirbhaychopra1008@gmail.com" && (
                 <Link to={"/createItem"}>
-                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base">
+                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-in-out text-textColor text-base"
+                  onClick={() => setIsMenue(false)}>
                     New item <MdAdd> </MdAdd>
                   </p>
                 </Link>
@@ -178,25 +180,25 @@ export const Header = () => {
                 <li
                   whileTap={{ scale: 0.6 }}
                   className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2 "
-                >
+                onClick = {() =>setIsMenue(false)}>
                   Home
                 </li>
                 <li
                   whileTap={{ scale: 0.6 }}
                   className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2 "
-                >
+                onClick = {() =>setIsMenue(false)}>
                   Menu
                 </li>
                 <li
                   whileTap={{ scale: 0.6 }}
                   className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2 "
-                >
+                onClick = {() =>setIsMenue(false)}>
                   About us
                 </li>
                 <li
                   whileTap={{ scale: 0.6 }}
                   className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer hover:bg-slate-100 px-4 py-2 "
-                >
+                onClick = {() => setIsMenue(false)}>
                   Service
                 </li>
               </ul>
