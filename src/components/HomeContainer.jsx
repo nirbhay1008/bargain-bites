@@ -21,16 +21,17 @@ export const HomeContainer = () => {
         </div>
 
         <p className="text-[2.5rem] lg:text-[4.5rem] font-bold tracking-wide text-headingColor">
-          The Fastest Delivery in {" "}
+          Savor The Flavor without {" "}
           <span className="text-orange-600 text-[3rem] lg:text-[5rem]">
-            Your City
+          Overspending!
           </span>
         </p>
         <p className="text-base text-textColor text-center md:text-left md:w-[80%]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-          molestiae, sunt autem totam ab optio saepe eum delectus dolorem?
-          Expedita quam blanditiis asperiores placeat eveniet quasi iure quidem
-          obcaecati laborum?
+        Welcome to <span className="text-textColor font-semibold">Bargain Bites</span>, where you can save money while
+          providing answers to simple questions. Our questionnaire covers
+          various aspects, providing comprehensive feedback and exclusive
+          discounts on delicious dishes. Join us today and make a difference in
+          the restaurant industry while exploring new dining options.
         </p>
 
         <button

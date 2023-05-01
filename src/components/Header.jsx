@@ -110,7 +110,7 @@ export const Header = () => {
                 initial={{ opacity: 0, scale: 0.6 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.6 }}
-                className="w-40 bg-grey-50 shadow-xl rounded-lg flex-col absolute top-12 right-0"
+                className="w-40 bg-green-50 shadow-xl rounded-lg flex-col absolute top-12 right-0"
               >
                 {user && user.email === "nirbhaychopra1008@gmail.com" && (
                   <Link to={"/createItem"}>

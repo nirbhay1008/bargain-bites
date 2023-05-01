@@ -29,6 +29,7 @@ export const CreateContainer = () => {
   const [alertStatus, setalertStatus] = useState("Danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [{foodItems} , dispatch] = useStateValue();
 
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -126,6 +127,8 @@ export const CreateContainer = () => {
         setIsLoading(false);
       }, 4000);
     }
+
+    fetchData();
   };
 
   const clearData = () => {
@@ -134,6 +137,15 @@ export const CreateContainer = () => {
     setCalories("");
     setPrice("");
     setCategory("Select Category");
+  };
+
+  const fetchData = async () => {
+    await getAllFoodItems().then((data) => {
+      dispatch({
+        type: actionType.SET_FOOD_ITEMS,
+        foodItems : data,
+      });
+    });
   };
 
   return (
