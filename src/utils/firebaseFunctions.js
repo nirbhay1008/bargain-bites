@@ -6,7 +6,7 @@ import { doc , getDocs,
 
 // saving new items
 export const saveItem = async (data) => {
-  await setDoc(doc(firestore, "fooditems", `${Date.now()}`), data, {
+  await setDoc(doc(firestore, "foodItems", `${Date.now()}`), data, {
     merge: true,
   });
 };

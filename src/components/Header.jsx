@@ -65,12 +65,14 @@ export const Header = () => {
             exit={{ opacity: 0, x: 200 }}
             className="flex items-center gap-8"
           >
+            <Link to = {"/"}>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
               onClick = {() => setIsMenue(false)}>
               Home
             </li>
+            </Link>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"

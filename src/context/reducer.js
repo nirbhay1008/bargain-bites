@@ -1,10 +1,10 @@
 export const actionType = {
     SET_USER : 'SET_USER',  
-    SET_FOOD_ITEMS : 'SET_FOOD_ITEMS'
-}
+    SET_FOOD_ITEMS : 'SET_FOOD_ITEMS',
+};
 
 const reducer = (state , action) => {
-    console.log(action);
+    // console.log(action);
 
     switch(action.type){
         case actionType.SET_USER:

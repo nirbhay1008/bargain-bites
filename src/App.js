@@ -21,10 +21,10 @@ export const App = () => {
 
   useEffect(() =>{
     fetchData();
-  } , [0]);
+  } , []);
   
   return (
-    <AnimatePresence>
+    <AnimatePresence wait>
       <div className="w-screen h-auto flex flex-col">
         <Header />
         <main className="mt-20 md:mt-32 px-4 md:px-16 py-4 w-full ">
