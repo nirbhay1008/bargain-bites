@@ -87,7 +87,7 @@ export const CreateContainer = () => {
   const saveDetails = () => {
     setIsLoading(true);
     try {
-      if (!title || !calories || !imageAsset || !price || category === 'Select Category') {
+      if (!title || !calories || !imageAsset || !price || category === 'Select Category' || !category) {
         // console.log('error');
         setFields(true);
         setMsg("Required Fields can't be empty");
