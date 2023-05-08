@@ -21,7 +21,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
         data.map((item) => (
           <div
             key={item?.id}
-            className="w-300 min-w-[300px] md:w-340 bg-cardOverlay rounded-lg p-2 my-12 h-[225px]  backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-between"
+            className="w-275 min-w-[275px] md:w-340 bg-cardOverlay rounded-lg p-2 my-12 h-[225px]  backdrop-blur-lg hover:drop-shadow-lg flex flex-col items-center justify-between"
           >
             <div className="w-full flex items-center justify-between">
               <motion.img
@@ -41,7 +41,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
               <p className="text-textColor font-semibold text-base md:text-lg">
                 {item?.title}
               </p>
-              <p className="mt-1 text-sm text-gray-500">{item?.calories}</p>
+              <p className="mt-1 text-sm text-gray-500">{item?.calories} Calories</p>
               <div className="flex items-center gap-8">
                 <p className="text-lg  text-headingColor font-semibold">
                   {" "}
