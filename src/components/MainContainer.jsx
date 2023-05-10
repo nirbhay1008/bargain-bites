@@ -7,10 +7,10 @@ import { useStateValue } from "../context/StateProvider";
 import { useState } from "react";
 import { CartContainer, MenuContainer } from ".";
 export const MainContainer = () => {
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [{ foodItems , cartShow}, dispatch] = useStateValue();
   const [scrollValue, setScrollValue] = useState(0);
 
-  useEffect(() => {}, [scrollValue]);
+  useEffect(() => {}, [scrollValue , cartShow]);
 
   return (
     <div className="w-full h-auto flex flex-col items-center justify-center">
@@ -45,7 +45,9 @@ export const MainContainer = () => {
 
       <MenuContainer />
 
-      <CartContainer/>
+      {
+        cartShow && <CartContainer/>
+      }
 
 
     </div>
