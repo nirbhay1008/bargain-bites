@@ -7,3 +7,6 @@ export {default as RowContainer} from './RowContainer';
 export {default as MenuContainer} from './MenuContainer';
 export {default as CartContainer} from './CartContainer';
 export {default as cartItem} from './CartItem';
+export {default as QuizContainer} from './quizContainer';
+export {default as AboutPage} from './AboutPage.js';
+export {default as PaymentPage} from './PaymentPage';

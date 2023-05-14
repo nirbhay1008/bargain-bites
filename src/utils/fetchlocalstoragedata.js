@@ -13,3 +13,11 @@ export const fetchCart = () => {
 
     return cartInfo ? cartInfo : [];
 };
+
+export const score = () => {
+    const ScoreInfo = localStorage.getItem('score') !== "undefined"
+    ? JSON.parse(localStorage.getItem("score"))
+    : localStorage.clear();
+
+    return ScoreInfo ? ScoreInfo : 0;
+};

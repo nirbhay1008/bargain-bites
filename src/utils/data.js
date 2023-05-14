@@ -73,3 +73,42 @@ export const categories = [
     urlParamName: "drinks",
   },
 ];
+
+export const questions = [
+  {
+    id : 1,
+    question : "What country has the highest life expectancy?" , 
+    option : ["china" , "hongkong" , "India" , "Russia"],
+    correct : 1
+  },
+  {
+    id : 2,
+    question : "What country has the highest life expectancy?" , 
+    option : ["china" , "hongkong" , "India" , "Russia"],
+    correct : 1
+  },
+  {
+    id : 3,
+    question : "What country has the highest life expectancy?" , 
+    option : ["china" , "hongkong" , "India" , "Russia"],
+    correct : 1
+  },
+  {
+    id : 4,
+    question : "What is the most common surname in the United States ?" , 
+    option : ["Williams" , "Smith" , "Clarks" , "Biden"],
+    correct : 1
+  },
+  {
+    id : 5,
+    question : "What year was the United Nations established?" , 
+    option : ["1956" , "1945" , "1862" , "1742"],
+    correct : 1
+  },
+  {
+    id : 6,
+    question : "What marks will sir give us tommorow?" , 
+    option : ["40" , "39" , "37" , "38"],
+    correct : 0
+  }
+]

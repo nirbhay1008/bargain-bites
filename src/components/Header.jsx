@@ -8,7 +8,7 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../firebase.config";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
-
+import MenuContainer from "./MenuContainer";
 export const Header = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider();
@@ -90,6 +90,7 @@ export const Header = () => {
             >
               Menu
             </li>
+            <Link to =  {"/about_page"}>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
@@ -97,6 +98,7 @@ export const Header = () => {
             >
               About us
             </li>
+            </Link>
             <li
               whileTap={{ scale: 0.6 }}
               className="text-base text text-textColor hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer"
@@ -218,6 +220,7 @@ export const Header = () => {
                   onClick={() => setIsMenue(false)}
                 >
                   Menu
+
                 </li>
                 <li
                   whileTap={{ scale: 0.6 }}

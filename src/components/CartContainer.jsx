@@ -9,6 +9,7 @@ import EmptyCart from "../img/emptyCart.svg";
 import CartItem from "./CartItem";
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
   const [{ cartShow, cartItems, user }, dispatch] = useStateValue();
@@ -94,13 +95,16 @@ const CartContainer = () => {
               <p className="text-gray-200 text-xl font-semibold">$ {tot + 2.5}</p>
             </div>
             {user ? (
+              <Link to = {"/quiz"} className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg flex items-center justify-center"> 
               <motion.button
                 whileTap={{ scale: 0.8 }}
                 type="button"
-                className="w-full p-2 rounded-full bg-gradient-to-tr from-orange-400 to-orange-600 text-gray-50 text-lg my-2 hover:shadow-lg"
+                className=""
               >
                 Check Out
+                <Link to={"/quiz"} />
               </motion.button>
+              </Link>
             ) : (
               <motion.button
             whileTap={{ scale: 0.8 }}
